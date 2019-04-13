@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch-case</title>
+</head>
+<body>
+    <input type="text" id="jurusan" placeholder="masukkan kode jurusan">
+    <button>Klik</button>
+    <div id="result"></div>
+    <script>
+
+        /**
+
+        cara kerja dasar switch-else sama saja seperti if-else, bedanya switch-else patokannya pada key
+
+        switch-else biasanya digunakan untuk mengecek variabel yang sudah diketahui kira2 nilainya apa saja, seperti pada seleksi jurusan.
+        sedangkan if-else umumnya digunakan untuk pengecekan kondisional pada variabel yang nilainya tidak dapat ditebak.
+
+        */
+
+
+        var kode;
+        function cariKelas() {
+            kode = document.getElementById("jurusan").value;
+            switch (kode) { //kode disini adalah key. key adalah variabel yang ingin dicek nilainya
+                case "RPL": //pada case, dilakukan pengecekan apakah nilai pada variabel key tersebut memiliki value yang sama seperti yang ditulis disini.
+                    document.getElementById("result").innerHTML = "Jurusan Rekayasa Perangkat Lunak";
+                    break;
+                
+                case "AKT":
+                    document.getElementById("result").innerHTML = "Jurusan Akuntansi dan Keuangan";
+                    break;
+                
+                case "MGM":
+                    document.getElementById("result").innerHTML = "Jurusan Manajemen Pemasaran";
+                    break;
+            
+                default: //kalau ternyata dari semua case tersebut tidak ada yang sama nilainya ,yang dijalankan adalah value
+                    alert("jurusan tidak diketahui");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
