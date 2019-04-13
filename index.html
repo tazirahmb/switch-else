@@ -18,15 +18,24 @@
 
         if-else merupakan fungsi kondisional pada javascript.
 
+        simbol  perbandingan :
+
+        == sama dengan
+        !== tidak sama dengan
+        > lebih besar dari
+        < lebih kecil dari
+        >= lebih besar atau sama dengan dari
+        <= lebih kecil atau sama dengan dari
+
         */
 
 
         var nilai;
         function cekNilai() {
             kode = document.getElementById("nilai").value;
-            if(nilai >= 70) {
+            if(nilai >= 70) { //kode ini mengecek, apakah nilai lebih besar atau sama dengan 70? kalau lebih besar, kode yang ada di dalam kurung kurawal akan jalan.
                 document.getElementById("result").innerHTML = "nilai diatas KKM";
-            } else {
+            } else { //kalau ternyata dari if tersebut salah, maka yang jalan di else.
                 document.getElementById("result").innerHTML = "anda harus ikut remidial";
             }
         }
