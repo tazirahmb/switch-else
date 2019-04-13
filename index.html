@@ -8,7 +8,7 @@
 </head>
 <body>
     <input type="number" id="nilai" placeholder="masukkan nilai">
-    <button>Klik</button>
+    <button onclick="cekNilai()">Klik</button>
     <div id="result"></div>
     <script>
 
@@ -24,7 +24,11 @@
         var nilai;
         function cekNilai() {
             kode = document.getElementById("nilai").value;
-            
+            if(nilai >= 70) {
+                document.getElementById("result").innerHTML = "nilai diatas KKM";
+            } else {
+                document.getElementById("result").innerHTML = "anda harus ikut remidial";
+            }
         }
     </script>
 </body>
